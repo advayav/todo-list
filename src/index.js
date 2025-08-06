@@ -1,5 +1,11 @@
-import {greeting} from "./greeting.js";
-import "./style.css"
+import loadSingleNote from "./singleItem"
+import loadAllTodoItems from "./allLists"
 
-console.log(greeting);
+function loadAllProjects() {
+    const content = document.getElementById("content")
+    content.innerHTML = ""
+}
+
+loadAllProjects()
+
 
