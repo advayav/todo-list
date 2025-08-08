@@ -1,4 +1,4 @@
-function loadAllTodoItems(params) {
+function loadAllTodoItems(projName) {
     
 }
 
