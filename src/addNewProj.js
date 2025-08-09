@@ -1,4 +1,5 @@
 import loadAllProjects from "."
+import "./styles/newproj.css"
 
 function addNewProj() {
     const content = document.getElementById("content")
@@ -10,6 +11,13 @@ function addNewProj() {
     projform.className = "proj-form"
     projform.method = "dialog"
 
+    const formHeading = document.createElement("span")
+    formHeading.className = "form-heading"
+    formHeading.innerHTML = "Add New Project"
+
+    const inputSect = document.createElement("div")
+    inputSect.className = "input-section"
+
     const inputLabel = document.createElement("label")
     inputLabel.className = "form-label"
     inputLabel.htmlFor = "projName"
@@ -19,14 +27,18 @@ function addNewProj() {
     newprojName.type = "text"
     newprojName.id = "projName"
     newprojName.required = true
+    newprojName.placeholder = "Enter project name...."
+
+    inputSect.appendChild(inputLabel)
+    inputSect.appendChild(newprojName)
 
     const submit = document.createElement("button")
     submit.textContent = "Submit"
     submit.className = "form-btn"
     submit.id = "submit"
 
-    projform.appendChild(inputLabel)
-    projform.appendChild(newprojName)
+    projform.appendChild(formHeading)
+    projform.appendChild(inputSect)
     projform.appendChild(submit)
 
     projDialog.appendChild(projform)

@@ -34,20 +34,29 @@ function addNewTodo() {
     projform.appendChild(newtodoName)
     projform.appendChild(projLabel)
 
+    // Add date input and figure out how to format that when taking it in
+
     const projects = JSON.parse(localStorage.getItem("projects"))
 
     for (let i = 0; i < projects.length; i++) {
+        const optionLine = document.createElement("div")
+        optionLine.className = "proj-option-line"
+
         const projOption = document.createElement("input")
         
         projOption.type = "radio"
         projOption.innerHTML = projects[i]
         projOption.name = "proj-option"
+        projOption.id = `proj-${i}`
 
         const optionLabel = document.createElement("label")
         optionLabel.innerHTML = projects[i]
+        optionLabel.htmlFor = `proj-${i}`
 
-        projform.appendChild(optionLabel)
-        projform.appendChild(projOption)
+        optionLine.appendChild(projOption)
+        optionLine.appendChild(optionLabel)
+        
+        projform.appendChild(optionLine)
         
     }
 
