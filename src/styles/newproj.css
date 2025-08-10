@@ -1,0 +1,52 @@
+@font-face {
+    font-family: Ranade;
+    src: url("../fonts/Ranade-Regular.woff2");
+}
+
+body{
+    font-family: Ranade;
+}
+
+.proj-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* padding-top: 40px; */
+    padding: 10px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+.form-heading{
+    text-align: center;
+    font-size: large;
+}
+
+.input-section{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-label{
+    font-size: 12px;
+}
+
+#projName{
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.form-btn{
+    font-size: medium;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+dialog{
+    height: 250px;
+    width: 300px;
+}
+
+dialog::backdrop{
+    backdrop-filter: blur(10px);
+}
